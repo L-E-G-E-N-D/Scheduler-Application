@@ -1,7 +1,7 @@
 .schedule {
     display: grid;
     grid-row: 1/-1;
-    grid-template-rows: 100px repeat(5, 80px) [progress-s] 76px [progress-e];
+    grid-template-rows: [space-one-s] 1fr [space-one-e title-s] 100px [title-e] repeat(5, 80px) [progress-s] 1fr [progress-e];
     grid-row-gap: 22px;
     grid-column: schedule-s/schedule-e;
     position: relative;
@@ -12,12 +12,10 @@
     align-content: center;
 
     &__title {
-
-        border-left: 1px solid $color-subtle-gray;
-        padding-left: 30px;
+        grid-row: title-s/title-e;
         color: #ffffff;
         font-family: $font-alegreya;
         font-size: 20px;
-        // text-align: center;
+        @include border-left;
     }
 }
