@@ -1,9 +1,10 @@
 .schedule {
     display: grid;
-    grid-row: 1/-1;
-    grid-template-rows: [space-one-s] 1fr [space-one-e] repeat(5, 80px) [progress-s] 1fr [progress-e];
+    grid-template-rows: [space-one-s] 1fr [space-one-e] repeat(5, 80px) [progress-s] 90px [progress-e];
     grid-row-gap: 22px;
+
     grid-column: schedule-s/schedule-e;
+    grid-row: 1/-1;
     position: relative;
     height: 100%;
     width: 100%;
@@ -11,11 +12,7 @@
     justify-items: center;
     align-content: center;
 
-    padding-top: 237px;
-
     &__title {
-        position: absolute;
-        top: 154px;
         color: #ffffff;
         font-family: $font-lato;
         font-weight: 300;
